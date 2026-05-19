@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { requiredAuth } from "./loaders/requiredAuth";
 
-import Layout from "./components/layout";
+import Layout from "./components/Layout";
 
 import Home from "./components/Home";
 import Login from "./components/Login";
