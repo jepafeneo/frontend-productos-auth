@@ -3,10 +3,11 @@ import { useProducts } from "../hooks/useProducts";
 import Loading from "./ui/Loading";
 import ErrorMessage from "./ui/ErrorMessage";
 import SuccessMessage from "./ui/SuccessMessage";
+import Button from "./ui/Button";
+import Counter from "./ui/Counter";
 
 function Home() {
-  const { products, success, loading, error, handleDelete } =
-    useProducts();
+  const { products, success, loading, error, handleDelete } = useProducts();
 
   if (loading) {
     return <Loading text="Cargando productos..." />;
@@ -19,6 +20,10 @@ function Home() {
   return (
     <section>
       <h2>Listado de productos</h2>
+
+      <Button>Probando...</Button>
+      <Loading>Probando...</Loading>
+      <Counter />
 
       {success && <SuccessMessage message={success} />}
 
